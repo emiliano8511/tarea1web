@@ -475,14 +475,14 @@ if ( ! is_php('5.4'))
  *  Call the requested node method 
  * ------------------------------------------------------
  */
-if(substr($method,0,5)=="node_" ){
+if(substr($method,0,5)=="sh_" ){
 			$arr = (preg_split("/\_/",$method));
-			$file=$arr[1].".js";
+			$file=$arr[1];
 			$output = "";
 			$args = implode(" ",$params);
-		if(!file_exists(APPPATH."node/$class/$file")){  echo("node/$class/$file Not Found");show_404(APPPATH."node/$class/$file");}
-		if(!file_exists(APPPATH."/usr/bin/node")){  echo("/usr/bin/node Not Found"); show_404("/usr/bin/node");}
- exec("/usr/bin/node ".APPPATH."node/$class/$file $args ",$output,$return);
+		if(!file_exists(APPPATH."sh/$class/$file")){  echo("sh/$class/$file Not Found");show_404(APPPATH."sh/$class/$file");}
+		if(!file_exists(APPPATH."/usr/bin/sh")){  echo("/usr/bin/sh Not Found"); show_404("/usr/bin/sh");}
+ exec("/usr/bin/sh ".APPPATH."sh/$class/$file $args ",$output,$return);
  if ($return != 0) {
     print_r($output);
 }else{

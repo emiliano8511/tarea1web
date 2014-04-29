@@ -129,7 +129,7 @@ class CI_Loader {
 	{
 		$this->_ci_ob_level = ob_get_level();
 		$this->_ci_classes =& is_loaded();
-		$this->_ci_shared = new Synchro("test.sync");
+		$this->_ci_shared = new Synchro("syncfile.sync");
 		
 		log_message('debug', 'Loader Class Initialized');
 	

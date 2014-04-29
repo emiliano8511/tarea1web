@@ -1,4 +1,4 @@
-CodeigniterOnFire Boosted 
+CodeigniterOnFire  
 =======
 
 Automatically-generated database like django, Automatic json API from models, Automatic Node.js calls from Controllers to support high performance and complex processing.
@@ -48,16 +48,15 @@ Just set your model attributes using standard values. The database will be updat
 
 
 ----------
-Node.js  for high performance calls.
-In your CONTROLLER just use "node_jsfile" to name a method. The node file can be called using the following url:
+Shell script for high performance calls.
+In your CONTROLLER just use "sh_file" to name a method. The node file can be called using the following url:
 
-        URL: /index.php/CONTROLLER/node_jsfile/
+        URL: /index.php/CONTROLLER/sh_file/
 
-This url will execute a jsfile.js in the CONTROLLER folder at the node folder.
+This url will execute a FILE in the CONTROLLER folder at the "sh" folder.
 
- /application/node/CONTROLLER/jsfile.js
 
-The node std output will be passed as the first argument of the "node_jsfile" method in the CONTROLLER:
+The script std output will be passed as the first argument of the "sh_file" method in the CONTROLLER:
 
 
 
