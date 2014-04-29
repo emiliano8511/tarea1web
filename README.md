@@ -10,6 +10,7 @@ Just set your model attributes using standard values. The database will be updat
     MODEL
 
         class Blogmodel extends CI_Model {
+		//id autoincremental key
             var $title   = ''; //  type  TEXT 
             var $content = ''; //  type  TEXT
             var $date    = "2012-09-09"; //  type  DATETIME
@@ -22,11 +23,11 @@ Just set your model attributes using standard values. The database will be updat
  ----------
  JSON API
 
- On your MODEL just use the onfire_  prefix on a  method, this will enable the method in the controller using Reflexion and Closure. The output will be a JSON encoded return value of the model method.
+ On your MODEL just use the api_  prefix on a  method, this will enable the method in the controller using Reflexion and Closure. The output will be a JSON encoded return value of the model method.
 
     MODEL
 
-      function onfire_simplearray()
+      function api_simplearray()
         {
             return Array(1,2,4,5,6,7);
         } 
@@ -37,11 +38,11 @@ Just set your model attributes using standard values. The database will be updat
        {
             parent::__construct();
             // Add your models here
-            $this->load->model('Blogmodel2');
+            $this->load->model('Mymodel');
 
        }
 
-        URL: /index.php/CONTROLLER/onfire_simplearray/
+        URL: /index.php/CONTROLLER/api_simplearray/
 
 
     *Important: The model must be loaded in the constructor.
