@@ -12,7 +12,7 @@ class Blogmodel2 extends CI_Model {
         // Call the Model constructor
         parent::__construct();
     }
-     function onfire_lol()
+     function api_lol()
     {
         return Array(1,2,4,5,6,7);
     }

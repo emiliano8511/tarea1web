@@ -320,12 +320,7 @@ class CI_Loader {
 						
 						
 						$columns = array();
-						  $columns['id']  = array(
-                                                 'type' => 'INT',
-                                                 'constraint' => 5, 
-                                                 'unsigned' => TRUE,
-                                                 'auto_increment' => TRUE
-                                          	);
+						  $columns['id']  = array('type' => 'INT',  'unsigned' => TRUE, 'auto_increment' => TRUE);
 						foreach($add as $field){
 							
 							if(is_numeric($attrkeys[$field])){
@@ -351,7 +346,7 @@ class CI_Loader {
 
 					}else{
 					$columns = array();
-
+						  $columns['id']  = array('type' => 'INT','constraint' => 5,  'unsigned' => TRUE, 'auto_increment' => TRUE);
 					foreach($attr as $field){
 							
 							if(is_numeric($attrkeys[$field])){
@@ -369,6 +364,7 @@ class CI_Loader {
 						}
 				
 					$CI->dbforge->add_field($columns);
+						$CI->dbforge->add_key('id', TRUE);
 					$CI->dbforge->create_table($model, TRUE);
 					}
 			

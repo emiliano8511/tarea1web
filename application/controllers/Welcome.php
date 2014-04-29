@@ -37,8 +37,7 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
-		
-		$this->load->view('welcome_message');
+	print_r(	$this->Blogmodel2->api_lol());	
 	}
 	
 }
