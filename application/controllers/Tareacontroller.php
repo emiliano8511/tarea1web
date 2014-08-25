@@ -26,7 +26,8 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Tareacontroller extends CI_Controller
+{
   public function __construct()
        {
             parent::__construct();
@@ -37,9 +38,40 @@ class Welcome extends CI_Controller {
 	
 	public function index()
 	{
-	$d = $this->Tarea->get_last_ten_entries();
-	//print_r(	$this->Blogmodel->get_last_ten_entries());	
-	$this->load->view('list',array('data'=>$d));
+	 	$this->load->view('indice');
+	}
+
+
+
+	public function byid($id)
+	{
+		$entry=$this->Tarea->getbyid($id);
+		$this->load->view('entry',array('singleentry' => $entry));
+	}
+
+	public function insertar()
+	{	
+		$this->load->view('insert',0);
+	}
+
+
+	public function listar()
+	{
+		$d = $this->Tarea-> get_last_ten_entries();
+		//print_r($this->Tarea->get_last_ten_entries());
+		$this->load->view('listar',array('data' => $d));
+	}
+
+	public function insert_dato()
+	{	
+		$list=$this->Tarea->insert_entry();
+		header( 'Location: http://docencia.eit.udp.cl/~15996273/web/swisstool/index.php/Tareacontroller/listar' ) ;
+	}
+
+	public function actualizar()
+	{
+		$list=$this->Tarea->update_entry();
+		//$this->list();
 	}
 	
 }

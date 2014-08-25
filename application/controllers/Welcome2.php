@@ -31,13 +31,13 @@ class Welcome extends CI_Controller {
        {
             parent::__construct();
             // Add your models here
-            $this->load->model('Tarea');
+            $this->load->model('Blogmodel');
 
        }
 	
 	public function index()
 	{
-	$d = $this->Tarea->get_last_ten_entries();
+	$d = $this->Blogmodel->get_last_ten_entries();
 	//print_r(	$this->Blogmodel->get_last_ten_entries());	
 	$this->load->view('list',array('data'=>$d));
 	}

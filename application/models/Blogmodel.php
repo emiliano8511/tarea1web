@@ -14,7 +14,7 @@ class Blogmodel extends CI_Model {
     
     function get_last_ten_entries()
     {
-        $query = $this->db->get('entries', 10);
+        $query = $this->db->get('Blogmodel', 10);
         return $query->result();
     }
 
@@ -24,7 +24,7 @@ class Blogmodel extends CI_Model {
         $this->content = $_POST['content'];
         $this->date    = time();
 
-        $this->db->insert('entries', $this);
+        $this->db->insert('entries', get_last_ten_entries());
     }
 
     function update_entry()
