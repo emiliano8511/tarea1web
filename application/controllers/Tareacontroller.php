@@ -65,7 +65,7 @@ class Tareacontroller extends CI_Controller
 	public function insert_dato()
 	{	
 		$list=$this->Tarea->insert_entry();
-		header( 'Location: http://docencia.eit.udp.cl/~15996273/web/swisstool/index.php/Tareacontroller/listar' ) ;
+		header( 'Location: listar' ) ;
 	}
 
 	public function actualizar()

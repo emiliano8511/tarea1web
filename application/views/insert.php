@@ -2,7 +2,7 @@
 <body>
 <center>
 <h1>Insertar dato en la BD</h1></br>
-<form method="post" action="http://docencia.eit.udp.cl/~15996273/web/swisstool/index.php/Tareacontroller/insert_dato">
+<form method="post" action="insert_dato">
 
 <table>
 
@@ -14,7 +14,7 @@
 
 </table></br>
 
-<input type="submit"/>
+<input type="submit"/><a href="listar"><input type="button" value="Volver"></a>
 </center>
 </form>
 </body>

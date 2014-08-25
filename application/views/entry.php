@@ -2,7 +2,7 @@
 <body>
 <center>
 <h1>Modificar Datos</h1>
-<form method="post" action="http://docencia.eit.udp.cl/~15996273/web/swisstool/index.php/Tareacontroller/actualizar">
+<form method="post" action="../actualizar">
 <input type="hidden" name="id" value="<?=$singleentry->id?>">
 <table>
 <tr>
@@ -12,7 +12,7 @@
 </tr>
 </table>
 </br>
-<input type="submit" value="Modificar"> <a href="http://docencia.eit.udp.cl/~15996273/web/swisstool/index.php/Tareacontroller/listar"><input type="button" value="Regresar"></a>
+<input type="submit" value="Modificar"> <a href="../listar"><input type="button" value="Regresar"></a>
 </table>
 </form>
 </center>

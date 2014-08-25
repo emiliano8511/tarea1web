@@ -12,7 +12,7 @@ class Tarea extends CI_Model {
     
     function get_last_ten_entries()
     {
-        $query = $this->db->get('Tarea', 10);
+        $query = $this->db->get('Tarea', 100);
         return $query->result();
     }
 
@@ -38,7 +38,7 @@ class Tarea extends CI_Model {
         $this->contenido = $_POST['contenido'];
 
         $this->db->update('Tarea', $this,array('id' => $_POST['id']));
-	header( 'Location:http://docencia.eit.udp.cl/~15996273/web/swisstool/index.php/Tareacontroller/listar' ) ;
+	header( 'Location:  listar' ) ;
     }
 
 }
