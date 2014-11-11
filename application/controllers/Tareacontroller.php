@@ -32,8 +32,9 @@ class Tareacontroller extends CI_Controller
        {
             parent::__construct();
             // Add your models here
-            $this->load->model('Tarea');
-
+            //$this->load->model('Tarea');	
+            $this->load->model('Usuario');
+	session_start();
        }
 	
 	public function index()
@@ -41,38 +42,26 @@ class Tareacontroller extends CI_Controller
 	 	$this->load->view('indice');
 	}
 
-
-
-	public function byid($id)
+	public function listar_usuarios()
 	{
-		$entry=$this->Tarea->getbyid($id);
-		$this->load->view('entry',array('singleentry' => $entry));
+		$list=$this->Usuario->dame_los_usuarios();	
+		$this->load->view('123',array('data' => $list));
 	}
 
-	public function insertar()
-	{	
-		$this->load->view('insert',0);
-	}
-
-
-	public function listar()
+	public function insertar_usuario()
 	{
-		$d = $this->Tarea-> get_last_ten_entries();
-		//print_r($this->Tarea->get_last_ten_entries());
-		$this->load->view('listar',array('data' => $d));
+		$list=$this->Usuario->inscribe_usuario();
+		header('Location: http://docencia.eit.udp.cl/~15996273/web/swisstool/index.php/Tareacontroller/#inicio');
 	}
 
-	public function insert_dato()
-	{	
-		$list=$this->Tarea->insert_entry();
-		header( 'Location: listar' ) ;
-	}
-
-	public function actualizar()
+	public function logear_usuario()
 	{
-		$list=$this->Tarea->update_entry();
-		//$this->list();
-	}
+		//$entry=$this->Usuario->log($);
+	}	
+	/*public fuction mostrar_tienda(id)
+	{
+		$tienda=$this->Tienda->detalle_tienda(1);
+	}*/
 	
 }
 

@@ -41,4 +41,10 @@ class Tarea extends CI_Model {
 	header( 'Location:  listar' ) ;
     }
 
+	function dame_los_usuarios()
+	{
+		$query = $this->db->get('usuarios',10);
+		return $query->result();	
+	}
+
 }

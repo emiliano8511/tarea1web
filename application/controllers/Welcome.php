@@ -39,7 +39,7 @@ class Welcome extends CI_Controller {
 	{
 	$d = $this->Tarea->get_last_ten_entries();
 	//print_r(	$this->Blogmodel->get_last_ten_entries());	
-	$this->load->view('list',array('data'=>$d));
+	$this->load->view('proyecto',array('data'=>$d));
 	}
 	
 }
