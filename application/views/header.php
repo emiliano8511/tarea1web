@@ -20,7 +20,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script src="<?php echo base_url(); ?>js/mapa.js"></script>    
-	<script src="<?php echo base_url(); ?>js/usuarios.js"></script>    
+	
 
 
     <title>Grayscale - Start Bootstrap Theme</title>
@@ -69,19 +69,16 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#inicio">Inicio</a>
+                        <a class="page-scroll" href="<?=site_url('Tiendacontroller/index');?>">Inicio</a>
                     </li>
 					<li>
                         <a class="page-scroll" href="<?=site_url('Tiendacontroller/vista_detalle_tienda');?>">Tiendas</a>
                     </li>
 					<li>
-                        <a class="page-scroll" href="#detalle_tienda">Detalle Libros</a>	
+                        <a class="page-scroll" href="<?=site_url('Libroscontroller/listar_libros');?>">Libros</a>	
                     </li>
 					<li>
-                        <a class="page-scroll" href="#comentarios_tienda">Comentarios Tienda</a>						
-                    </li>
-		                        <li>
-                        <a class="page-scroll" href="#detalle">Detalle Libro</a>
+                        <a class="page-scroll" href="#comentarios_tienda">Librer&iacuteas</a>						
                     </li>
                                         <li>
                         <a class="page-scroll" href="#contact">Contacto</a>

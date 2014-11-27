@@ -54,15 +54,13 @@ class Tareacontroller extends CI_Controller
 		header('Location: http://docencia.eit.udp.cl/~15996273/web/swisstool/index.php/Tareacontroller/#inicio');
 	}
 
-	public function logear_usuario()
+	public function logear_usuario($mail,$pass)
 	{
+		$entry= $this->Usuario-> log($mail,$pass);
+		$this->load->view('123',array('data' => $list));
+		
 		//$entry=$this->Usuario->log($);
-	}	
-	/*public fuction mostrar_tienda(id)
-	{
-		$tienda=$this->Tienda->detalle_tienda(1);
-	}*/
-	
+	}		
 }
 
 /* End of file welcome.php */
